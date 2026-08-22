@@ -1,0 +1,624 @@
+{
+  "deterministic_metrics": {
+    "citation_presence_rate_on_answerable": 1.0,
+    "refusal_accuracy_on_unanswerable": 1.0
+  },
+  "cases": [
+    {
+      "question": "What is byte pair encoding, and how does a BPE tokenizer handle unknown words?",
+      "answerable": true,
+      "reference_answer": "Byte pair encoding (BPE) is a tokenization method used by models such as GPT-2 and GPT-3. It can handle unfamiliar words without an <|unk|> token by breaking them into smaller subword units or individual characters. BPE builds its vocabulary by repeatedly merging frequently occurring characters into subwords and frequent subwords into larger units.",
+      "generated_answer": "Based on the provided documents, Byte Pair Encoding (BPE) is a tokenization algorithm that builds its vocabulary by iteratively merging frequent characters into subwords and frequent subwords into words [S2]. It starts with individual single characters and merges character combinations that frequently occur together, determined by a frequency cutoff [S2].\n\nA BPE tokenizer handles unknown words by breaking them down into smaller subword units or individual characters [S1, S3]. This allows the tokenizer to parse any word without needing to replace unknown words with special tokens like `<|unk|>` [S2]. Consequently, the model can process text containing words not present in its training data by representing them as a sequence of subword tokens or characters [S3].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 63,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 44,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 43,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 358,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 40,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is the self-attention mechanism, and how does it create context-aware representations of tokens?",
+      "answerable": true,
+      "reference_answer": "Self-attention creates an enriched context vector for each input token by incorporating information from the other tokens in the sequence. Attention scores measure relationships between tokens, the scores are normalized into attention weights, and the context vector is formed as a weighted sum of the input representations.",
+      "generated_answer": "Based on the provided documents, the self-attention mechanism is a component of transformer-based large language models (LLMs) that allows each position in an input sequence to attend to all other positions within the same sequence [S2]. It computes more efficient input representations by enabling each position to interact with and weigh the importance of all other positions [S2].\n\nIt creates context-aware representations (context vectors) through the following process:\n\n*   **Weighted Sums:** The mechanism computes the context vector representation as a weighted sum over the inputs [S4].\n*   **Incorporating Global Information:** These context vectors create enriched representations of each element in the input sequence by incorporating information from all other elements in the sequence [S1].\n*   **Learnable Weights:** In LLMs, trainable weight matrices are used to project embedded input tokens into query, key, and value vectors [S3]. The model learns to construct these weights so that the resulting context vectors are relevant for generating the next token [S1].\n*   **Attention Scores:** Intermediate values, referred to as attention scores, are computed (often via dot products in simplified mechanisms) to determine these weights [S1][S4].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 72,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 69,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 81,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 112,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 92,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is next-word prediction, why is it described as self-supervised learning, and what does it enable?",
+      "answerable": true,
+      "reference_answer": "In next-word prediction, a GPT-like model predicts the upcoming word using the preceding words. It is self-supervised because the training data provides its own labels: the next word becomes the target without manually collected labels. This allows LLMs to be trained on massive unlabeled text datasets and learn language patterns that transfer to other tasks.",
+      "generated_answer": "Based on the provided documents, here is the answer to your question:\n\n**What is next-word prediction?**\nNext-word prediction is a task in which a system learns to predict the upcoming word in a sentence by looking at the words that have come before it [S1]. It is a simple task that harnesses the inherent sequential nature of language [S2]. In architectures like GPT, this is done in an iterative, left-to-right fashion, one word at a time [S4].\n\n**Why is it described as self-supervised learning?**\nIt is described as self-supervised learning because it is a form of \"self-labeling\" where explicit labels do not need to be collected [S1]. Instead, the model leverages the structure of the data itself by using the next word in a sentence or document as the label that the model is supposed to predict [S1]. This allows labels to be created \"on the fly,\" enabling the use of massive unlabeled text datasets for training [S1].\n\n**What does it enable?**\nNext-word prediction enables the following:\n*   **Understanding Language Structure:** It helps the model understand how words and phrases typically fit together, forming a foundation for understanding context, structure, and relationships within text [S1, S2].\n*   **Training on Massive Data:** It allows for the leveraging of massive unlabeled text datasets to train Large Language Models (LLMs) [S1].\n*   **Text Generation:** It enables models to generate text coherently, as each new word is chosen based on the preceding sequence [S1].\n*   **Emergent Capabilities:** It enables models to perform tasks they were not explicitly trained for, such as translation, classification, and summarization, which emerge as a natural consequence of exposure to vast quantities of data [S4, S5].\n*   **Foundation for Downstream Tasks:** It creates a foundation model that can be finetuned more efficiently for various specific downstream tasks [S5].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 18,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 6,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 307,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 19,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 21,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "Why do LLMs need positional embeddings, and what is the difference between absolute and relative positional embeddings?",
+      "answerable": true,
+      "reference_answer": "Token embeddings alone do not tell the model where a token occurs in a sequence, and self-attention itself is position-agnostic. Positional embeddings add order information. Absolute positional embeddings represent specific positions, while relative positional embeddings represent distances or relationships between token positions.",
+      "generated_answer": "LLMs need positional embeddings because the self-attention mechanism is position-agnostic, and standard token embeddings provide the same vector representation for a token regardless of its location in the sequence [S2]. While this deterministic embedding is good for reproducibility, it lacks information about the token's position, which is necessary for the model to understand the order and relationships between tokens [S2][S4]. Positional embeddings augment the model's capacity to make more accurate and context-aware predictions by injecting this position information [S1][S2].\n\nThe difference between absolute and relative positional embeddings is as follows:\n\n*   **Absolute Positional Embeddings:** These are directly associated with specific positions in a sequence. Each position has a unique embedding added to the token's embedding to convey its exact location (e.g., the first token has a specific embedding, the second has another) [S2]. OpenAI's GPT models use absolute positional embeddings that are optimized during the training process [S1][S4].\n*   **Relative Positional Embeddings:** Instead of focusing on the absolute position, these emphasize the relative position or distance between tokens. The model learns relationships in terms of \"how far apart\" tokens are rather than \"at which exact position\" [S1]. This allows the model to generalize better to sequences of varying lengths, even if those lengths were not seen during training [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 59,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 58,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 62,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 63,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 26,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is causal attention, and why are future tokens masked in GPT-like language models?",
+      "answerable": true,
+      "reference_answer": "Causal attention is a masked form of self-attention that allows each token to use only the current and previous tokens. Future tokens are masked so that a GPT-like model cannot use information that would not yet be available when predicting the next token.",
+      "generated_answer": "Causal attention, also known as masked attention, is a specialized form of self-attention that restricts a model to consider only previous and current inputs in a sequence when processing any given token [S1]. This contrasts with standard self-attention, which allows access to the entire input sequence at once [S1].\n\nFuture tokens are masked in GPT-like language models to prevent the model from accessing future information in the sequence [S4]. This is crucial for tasks like language modeling, where each word prediction should depend only on previous words [S4]. By masking out future tokens, the mechanism ensures there is no information leakage from future tokens [S3], ensuring that each token is influenced only by itself and preceding tokens [S5].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 92,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 230,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 95,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 91,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 229,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is the difference between pretraining and finetuning an LLM?",
+      "answerable": true,
+      "reference_answer": "Pretraining is the initial training stage in which an LLM learns from a large and diverse text dataset to develop general language capabilities. Finetuning starts from the pretrained model and trains it further on a smaller, more specialized or labeled dataset for particular tasks or domains.",
+      "generated_answer": "Based on the provided documents, the differences between pretraining and finetuning an LLM are as follows:\n\n**Pretraining**\n*   **Data:** It involves training the model on a large, diverse corpus of \"raw\" text data that lacks labeling information [S1].\n*   **Objective:** The model learns to predict the next word in a sequence, developing a broad understanding of language and general patterns [S1, S3, S5].\n*   **Outcome:** This stage creates a \"base\" or \"foundation\" model capable of text completion and limited few-shot learning [S1, S3].\n\n**Finetuning**\n*   **Data:** It involves further training the pretrained model on a smaller, labeled dataset that is specific to particular tasks or domains [S1, S3].\n*   **Objective:** The goal is to refine the model to perform specific tasks, such as following human instructions or classifying text [S2, S3, S4].\n*   **Outcome:** This adapts the general foundation model to improve its ability to execute specific instructions (e.g., translation, grammar fixing) or classify data (e.g., spam detection) [S2, S4].\n\nIn summary, pretraining provides the general language foundation using unlabeled data, while finetuning specializes that foundation for specific tasks using labeled data [S3].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 11,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 249,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 10,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 205,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 274,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "Why are embeddings needed before text can be processed by an LLM?",
+      "answerable": true,
+      "reference_answer": "Neural networks cannot directly process raw categorical text using their mathematical operations. Embeddings convert discrete items such as words or tokens into continuous numerical vectors that neural networks can process and learn from.",
+      "generated_answer": "Embeddings are needed because Large Language Models (LLMs) are deep neural networks that cannot process raw text directly [S1, S4]. Since text is categorical data, it is not compatible with the mathematical operations required to implement and train neural networks [S4]. Embeddings transform this discrete data into continuous-valued vectors, making it compatible with neural network operations and allowing the models to be trained using algorithms like backpropagation [S1, S3, S4].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 62,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 45,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 54,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 23,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 26,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "Which datasets were used for GPT-3 pretraining, and which source contributed the largest proportion of the training data?",
+      "answerable": true,
+      "reference_answer": "The GPT-3 pretraining data described in the document includes filtered CommonCrawl, WebText2, Books1, Books2, and Wikipedia. Filtered CommonCrawl contributed the largest proportion, accounting for 60 percent of the training data.",
+      "generated_answer": "Based on the provided document, the datasets used for GPT-3 pretraining were:\n\n*   **CommonCrawl (filtered)**: Web crawl data [S1]\n*   **WebText2**: Web crawl data [S1]\n*   **Books1**: Internet-based book corpus [S1]\n*   **Books2**: Internet-based book corpus [S1]\n*   **Wikipedia**: High-quality text [S1]\n\nThe source that contributed the largest proportion of the training data was **CommonCrawl (filtered)**, which accounted for **60%** of the training data [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 16,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 16,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 17,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 371,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 361,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What does emergent behavior mean in the context of GPT models?",
+      "answerable": true,
+      "reference_answer": "Emergent behavior refers to a model gaining abilities that it was not explicitly trained to perform. The document uses translation as an example: GPT models trained primarily for next-word prediction can still learn translation patterns through exposure to large amounts of multilingual text.",
+      "generated_answer": "In the context of GPT models, emergent behavior refers to the ability of the model to perform tasks that it was not explicitly trained to perform [S1]. For example, although GPT models are primarily trained on next-word prediction tasks, they can unexpectedly perform translation tasks [S1]. This capability is not explicitly taught during training but emerges as a natural consequence of the model's exposure to vast quantities of multilingual data in diverse contexts [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 19,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 116,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 117,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 149,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 142,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What are shortcut or residual connections, and how do they help train deep neural networks?",
+      "answerable": true,
+      "reference_answer": "Shortcut, skip, or residual connections create an alternative path by adding a layer's input to a later output. They help preserve gradient flow during backpropagation and reduce the vanishing-gradient problem, making very deep networks such as LLMs easier to train.",
+      "generated_answer": "Shortcut connections, also known as skip or residual connections, are connections inserted between different layers of a neural network that skip one or more layers by feeding the output of one layer directly to a deeper layer [S2][S4]. They are implemented by adding the inputs of a layer to its outputs, creating an alternate path that bypasses certain layers [S3].\n\nThey help train deep neural networks by mitigating the vanishing gradient problem [S2][S4]. This problem occurs when gradients become progressively smaller as they propagate backward through layers, making it difficult to effectively train earlier layers [S2]. Shortcut connections create a shorter path for gradients to flow through the network, ensuring consistent gradient flow and stabilizing gradient values so they do not shrink to vanishingly small values [S1][S3].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 138,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 134,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 135,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 154,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 136,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What major components are combined inside the GPT transformer block described in the book?",
+      "answerable": true,
+      "reference_answer": "The GPT transformer block combines masked multi-head attention, feed-forward layers, layer normalization, dropout, GELU activations, and shortcut connections. Self-attention models relationships between sequence elements while the feed-forward network transforms each position individually.",
+      "generated_answer": "Based on the provided documents, the GPT transformer block combines the following major components:\n\n*   **Masked multi-head attention module** [S1]\n*   **Feedforward module** (also referred to as feedforward layers or feedforward neural network layers) [S1][S3]\n*   **Layer normalization** [S2][S3][S4]\n*   **Dropout** [S2][S3]\n*   **GELU activations** (included within the feedforward network) [S2][S4]\n*   **Shortcut connections** [S4]\n\nAdditionally, the text notes that the block processes input sequences represented by fixed-size vectors and is designed to preserve their dimensionality [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 140,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 139,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 143,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 142,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 198,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "When should instruction-finetuning be preferred over classification-finetuning, and what is the main trade-off?",
+      "answerable": true,
+      "reference_answer": "Instruction-finetuning is suited to models that must respond flexibly to many different user instructions, whereas classification-finetuning is suited to assigning inputs to predefined classes such as spam or sentiment categories. Instruction-finetuning is more versatile but generally requires more data and computational resources.",
+      "generated_answer": "Instruction-finetuning should be preferred when a model needs to handle a variety of tasks based on complex user instructions, as it improves flexibility and interaction quality [S1]. In contrast, classification-finetuning is ideal for projects requiring precise categorization into predefined classes [S1].\n\nThe main trade-off is that while instruction-finetuning is more versatile, it demands larger datasets and greater computational resources [S1]. Conversely, classification-finetuning requires less data and compute power but is confined to the specific classes on which the model was trained [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 207,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 365,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 11,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 206,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 205,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is LoRA, and why is it considered parameter-efficient finetuning?",
+      "answerable": true,
+      "reference_answer": "LoRA, or low-rank adaptation, adapts a pretrained model by learning a small number of additional parameters instead of updating all of the original model weights. It approximates a full weight update using two smaller matrices, reducing compute and storage requirements while leaving the pretrained weights unchanged.",
+      "generated_answer": "LoRA (Low-Rank Adaptation) is a technique used to adapt a pretrained model to a specific dataset by adjusting only a small subset of the model's weight parameters [S1]. It is considered parameter-efficient because it significantly reduces the computational costs and resources required for finetuning large models [S1].\n\nInstead of computing full weight updates ($\\delta W$) as done in regular finetuning, LoRA approximates these updates using the product of two much smaller matrices, $A$ and $B$ ($\\delta W \\approx AB$) [S4]. This approach limits model adjustments to a smaller dimensional subspace of the total weight parameter space, effectively capturing the most influential directions of change while keeping the number of trainable parameters low [S1].",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 389,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 4,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 400,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 390,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 300,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": true,
+      "abstained": false,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "answerable": false,
+      "reference_answer": null,
+      "generated_answer": "I couldn't find enough evidence in the uploaded documents to answer that.",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 281,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 197,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 76,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 77,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 67,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": false,
+      "abstained": true,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    },
+    {
+      "question": "Who won the 2026 FIFA World Cup?",
+      "answerable": false,
+      "reference_answer": null,
+      "generated_answer": "I couldn't find enough evidence in the uploaded documents to answer that.",
+      "retrieved_sources": [
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 221,
+          "label": "S1"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 121,
+          "label": "S2"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 91,
+          "label": "S3"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 212,
+          "label": "S4"
+        },
+        {
+          "document": "Build-a-Large-Language-Model.pdf",
+          "page": 326,
+          "label": "S5"
+        }
+      ],
+      "has_source_citation": false,
+      "abstained": true,
+      "manual_review": {
+        "faithful_to_context": null,
+        "answers_question": null,
+        "citation_supported": null,
+        "notes": ""
+      }
+    }
+  ],
+  "note": "Faithfulness and factual correctness are intentionally left for manual audit in v1 rather than pretending an LLM judge is ground truth."
+}

@@ -1,0 +1,2192 @@
+{
+  "k": 5,
+  "examples": 13,
+  "summary": {
+    "dense": {
+      "hit_at_k": 1.0,
+      "precision_at_k": 0.4154,
+      "recall_at_k": 0.8308,
+      "mrr": 0.9615,
+      "latency_ms": 88.1282
+    },
+    "lexical": {
+      "hit_at_k": 0.2308,
+      "precision_at_k": 0.0769,
+      "recall_at_k": 0.0692,
+      "mrr": 0.2308,
+      "latency_ms": 50.8085
+    },
+    "hybrid": {
+      "hit_at_k": 0.9231,
+      "precision_at_k": 0.4,
+      "recall_at_k": 0.7923,
+      "mrr": 0.9231,
+      "latency_ms": 145.1682
+    },
+    "dense_reranked": {
+      "hit_at_k": 1.0,
+      "precision_at_k": 0.4,
+      "recall_at_k": 0.8415,
+      "mrr": 1.0,
+      "latency_ms": 1448.8045
+    },
+    "hybrid_reranked": {
+      "hit_at_k": 1.0,
+      "precision_at_k": 0.3846,
+      "recall_at_k": 0.8261,
+      "mrr": 1.0,
+      "latency_ms": 1597.6927
+    }
+  },
+  "cases": [
+    {
+      "id": "llm-book-001",
+      "question": "What is byte pair encoding, and how does a BPE tokenizer handle unknown words?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.8,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 95.29,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 44,
+              "chunk_id": 55
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 358,
+              "chunk_id": 475
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 43,
+              "chunk_id": 54
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 42,
+              "chunk_id": 52
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.25,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 76.27,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.8,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 144.96,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 44,
+              "chunk_id": 55
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 358,
+              "chunk_id": 475
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 43,
+              "chunk_id": 54
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 42,
+              "chunk_id": 52
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.75,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1489.23,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 44,
+              "chunk_id": 55
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 43,
+              "chunk_id": 54
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 358,
+              "chunk_id": 475
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 40,
+              "chunk_id": 48
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.75,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1597.69,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 44,
+              "chunk_id": 55
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 43,
+              "chunk_id": 54
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 358,
+              "chunk_id": 475
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 40,
+              "chunk_id": 48
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-002",
+      "question": "What is the self-attention mechanism, and how does it create context-aware representations of tokens?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.3333333333333333,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 96.65,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 69,
+              "chunk_id": 87
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 81,
+              "chunk_id": 102
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 70,
+              "chunk_id": 88
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 71,
+              "chunk_id": 89
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 65,
+              "chunk_id": 82
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 56.44,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.3333333333333333,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 152.23,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 69,
+              "chunk_id": 87
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 81,
+              "chunk_id": 102
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 70,
+              "chunk_id": 88
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 71,
+              "chunk_id": 89
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 65,
+              "chunk_id": 82
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.2222222222222222,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1493.63,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 72,
+              "chunk_id": 90
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 69,
+              "chunk_id": 87
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 81,
+              "chunk_id": 102
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 112,
+              "chunk_id": 150
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.2222222222222222,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1470.22,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 72,
+              "chunk_id": 90
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 69,
+              "chunk_id": 87
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 81,
+              "chunk_id": 102
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 112,
+              "chunk_id": 150
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-003",
+      "question": "What is next-word prediction, why is it described as self-supervised learning, and what does it enable?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 88.2,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 18,
+              "chunk_id": 23
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 6,
+              "chunk_id": 6
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 26
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 27
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 52.68,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 143.09,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 18,
+              "chunk_id": 23
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 6,
+              "chunk_id": 6
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 26
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 27
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1417.33,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 18,
+              "chunk_id": 23
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 6,
+              "chunk_id": 6
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 307,
+              "chunk_id": 406
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 26
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1485.99,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 18,
+              "chunk_id": 23
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 6,
+              "chunk_id": 6
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 307,
+              "chunk_id": 406
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 21,
+              "chunk_id": 26
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-004",
+      "question": "Why do LLMs need positional embeddings, and what is the difference between absolute and relative positional embeddings?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 69.99,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 59,
+              "chunk_id": 75
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 58,
+              "chunk_id": 74
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 57,
+              "chunk_id": 73
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 49.23,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 140.18,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 59,
+              "chunk_id": 75
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 58,
+              "chunk_id": 74
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 57,
+              "chunk_id": 73
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1413.44,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 59,
+              "chunk_id": 75
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 58,
+              "chunk_id": 74
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 26,
+              "chunk_id": 33
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1621.55,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 59,
+              "chunk_id": 75
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 58,
+              "chunk_id": 74
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 63,
+              "chunk_id": 80
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 26,
+              "chunk_id": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-005",
+      "question": "What is causal attention, and why are future tokens masked in GPT-like language models?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.6666666666666666,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 99.78,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 230,
+              "chunk_id": 309
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 95,
+              "chunk_id": 123
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 115,
+              "chunk_id": 153
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 91,
+              "chunk_id": 116
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 49.87,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.6666666666666666,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 136.58,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 230,
+              "chunk_id": 309
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 95,
+              "chunk_id": 123
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 115,
+              "chunk_id": 153
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 91,
+              "chunk_id": 116
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.6666666666666666,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1516.76,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 230,
+              "chunk_id": 309
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 95,
+              "chunk_id": 123
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 91,
+              "chunk_id": 116
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 229,
+              "chunk_id": 308
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.6666666666666666,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1480.61,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 92,
+              "chunk_id": 117
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 230,
+              "chunk_id": 309
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 95,
+              "chunk_id": 123
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 91,
+              "chunk_id": 116
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 229,
+              "chunk_id": 308
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-006",
+      "question": "What is the difference between pretraining and finetuning an LLM?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.5,
+            "reciprocal_rank": 0.5
+          },
+          "latency_ms": 88.05,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 249,
+              "chunk_id": 333
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 365,
+              "chunk_id": 490
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 273,
+              "chunk_id": 362
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 45.4,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 301,
+              "chunk_id": 399
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 204,
+              "chunk_id": 276
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 273,
+              "chunk_id": 361
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 302,
+              "chunk_id": 400
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 237,
+              "chunk_id": 318
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 146.92,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 204,
+              "chunk_id": 276
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 302,
+              "chunk_id": 400
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 301,
+              "chunk_id": 399
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 237,
+              "chunk_id": 318
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1410.4,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 249,
+              "chunk_id": 333
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 10,
+              "chunk_id": 11
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 274,
+              "chunk_id": 363
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1725.82,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 249,
+              "chunk_id": 333
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 10,
+              "chunk_id": 11
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 274,
+              "chunk_id": 363
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-007",
+      "question": "Why are embeddings needed before text can be processed by an LLM?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.5,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 87.53,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 23,
+              "chunk_id": 29
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 54,
+              "chunk_id": 68
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 53,
+              "chunk_id": 67
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 12
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 0.25,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 47.06,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 23,
+              "chunk_id": 29
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 61,
+              "chunk_id": 78
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.5,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 129.89,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 23,
+              "chunk_id": 29
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 61,
+              "chunk_id": 78
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 54,
+              "chunk_id": 68
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 53,
+              "chunk_id": 67
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.5,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1448.8,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 45,
+              "chunk_id": 56
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 54,
+              "chunk_id": 68
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 23,
+              "chunk_id": 29
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 26,
+              "chunk_id": 33
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 0.5,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1591.47,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 62,
+              "chunk_id": 79
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 45,
+              "chunk_id": 56
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 54,
+              "chunk_id": 68
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 23,
+              "chunk_id": 29
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 26,
+              "chunk_id": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-008",
+      "question": "Which datasets were used for GPT-3 pretraining, and which source contributed the largest proportion of the training data?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 80.07,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 19
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 20
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 17,
+              "chunk_id": 21
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 116,
+              "chunk_id": 154
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 171,
+              "chunk_id": 229
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 49.18,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 145.17,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 19
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 20
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 17,
+              "chunk_id": 21
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 116,
+              "chunk_id": 154
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 171,
+              "chunk_id": 229
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1429.9,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 19
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 20
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 17,
+              "chunk_id": 22
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 371,
+              "chunk_id": 498
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 361,
+              "chunk_id": 481
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1479.74,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 19
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 16,
+              "chunk_id": 20
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 17,
+              "chunk_id": 22
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 371,
+              "chunk_id": 498
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 361,
+              "chunk_id": 481
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-009",
+      "question": "What does emergent behavior mean in the context of GPT models?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 88.13,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 143,
+              "chunk_id": 195
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 115,
+              "chunk_id": 153
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 149,
+              "chunk_id": 204
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 117,
+              "chunk_id": 156
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 68.96,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 124.52,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 143,
+              "chunk_id": 195
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 115,
+              "chunk_id": 153
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 149,
+              "chunk_id": 204
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 117,
+              "chunk_id": 156
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1375.72,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 116,
+              "chunk_id": 154
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 117,
+              "chunk_id": 156
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 149,
+              "chunk_id": 204
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1439.71,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 19,
+              "chunk_id": 24
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 116,
+              "chunk_id": 154
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 117,
+              "chunk_id": 156
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 149,
+              "chunk_id": 204
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-010",
+      "question": "What are shortcut or residual connections, and how do they help train deep neural networks?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.8,
+            "recall_at_k": 0.8,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 77.06,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 134,
+              "chunk_id": 181
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 135,
+              "chunk_id": 182
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 187
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 136,
+              "chunk_id": 183
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 141,
+              "chunk_id": 191
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.4,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 53.83,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 136,
+              "chunk_id": 183
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 140,
+              "chunk_id": 190
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 141,
+              "chunk_id": 191
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 186
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 187
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.8,
+            "recall_at_k": 0.8,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 145.97,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 136,
+              "chunk_id": 183
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 134,
+              "chunk_id": 181
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 187
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 141,
+              "chunk_id": 191
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 135,
+              "chunk_id": 182
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.8,
+            "recall_at_k": 0.8,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1402.4,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 187
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 134,
+              "chunk_id": 181
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 135,
+              "chunk_id": 182
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 154,
+              "chunk_id": 210
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 136,
+              "chunk_id": 183
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.6,
+            "recall_at_k": 0.6,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1796.0,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 138,
+              "chunk_id": 187
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 134,
+              "chunk_id": 181
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 135,
+              "chunk_id": 182
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 113,
+              "chunk_id": 151
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 154,
+              "chunk_id": 210
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-011",
+      "question": "What major components are combined inside the GPT transformer block described in the book?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 112.61,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 139,
+              "chunk_id": 188
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 140,
+              "chunk_id": 189
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 144,
+              "chunk_id": 196
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 226,
+              "chunk_id": 305
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 49.23,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 227.03,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 139,
+              "chunk_id": 188
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 140,
+              "chunk_id": 189
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 144,
+              "chunk_id": 196
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 226,
+              "chunk_id": 305
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1698.96,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 140,
+              "chunk_id": 189
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 139,
+              "chunk_id": 188
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 143,
+              "chunk_id": 195
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 198,
+              "chunk_id": 267
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1739.2,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 140,
+              "chunk_id": 189
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 139,
+              "chunk_id": 188
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 143,
+              "chunk_id": 195
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 142,
+              "chunk_id": 193
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 198,
+              "chunk_id": 267
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-012",
+      "question": "When should instruction-finetuning be preferred over classification-finetuning, and what is the main trade-off?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 87.16,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 207,
+              "chunk_id": 279
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 273,
+              "chunk_id": 362
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 270,
+              "chunk_id": 358
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 13
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 67.38,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 153.44,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 207,
+              "chunk_id": 279
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 273,
+              "chunk_id": 362
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 270,
+              "chunk_id": 358
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 13
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1565.48,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 207,
+              "chunk_id": 279
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 365,
+              "chunk_id": 490
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 13
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 206,
+              "chunk_id": 278
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1658.37,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 207,
+              "chunk_id": 279
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 365,
+              "chunk_id": 490
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 11,
+              "chunk_id": 13
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 206,
+              "chunk_id": 278
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 205,
+              "chunk_id": 277
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "llm-book-013",
+      "question": "What is LoRA, and why is it considered parameter-efficient finetuning?",
+      "configurations": {
+        "dense": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 91.11,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 389,
+              "chunk_id": 523
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 390,
+              "chunk_id": 524
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 300,
+              "chunk_id": 398
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 391,
+              "chunk_id": 525
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 376,
+              "chunk_id": 506
+            }
+          ]
+        },
+        "lexical": {
+          "metrics": {
+            "hit_at_k": 0.0,
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0
+          },
+          "latency_ms": 50.81,
+          "top_results": []
+        },
+        "hybrid": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 159.01,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 389,
+              "chunk_id": 523
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 390,
+              "chunk_id": 524
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 300,
+              "chunk_id": 398
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 391,
+              "chunk_id": 525
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 376,
+              "chunk_id": 506
+            }
+          ]
+        },
+        "dense_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1547.02,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 389,
+              "chunk_id": 523
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 4,
+              "chunk_id": 3
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 400,
+              "chunk_id": 537
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 390,
+              "chunk_id": 524
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 300,
+              "chunk_id": 398
+            }
+          ]
+        },
+        "hybrid_reranked": {
+          "metrics": {
+            "hit_at_k": 1.0,
+            "precision_at_k": 0.4,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0
+          },
+          "latency_ms": 1677.57,
+          "top_results": [
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 389,
+              "chunk_id": 523
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 4,
+              "chunk_id": 3
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 400,
+              "chunk_id": 537
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 390,
+              "chunk_id": 524
+            },
+            {
+              "document": "Build-a-Large-Language-Model.pdf",
+              "page": 300,
+              "chunk_id": 398
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+streamlit>=1.61,<2
+PyMuPDF>=1.26,<2
+sentence-transformers>=5.7,<6
+psycopg[binary]>=3.3,<4
+pgvector>=0.5,<1
+groq>=0.31,<1
+google-genai>=1.0,<2
+python-dotenv>=1.0,<2
+numpy>=1.26,<3
+pytest>=8,<10
