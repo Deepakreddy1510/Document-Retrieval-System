@@ -1,4 +1,4 @@
-# PDF RAG Assistant
+# Document Retrieval System 
 
 A simple multi-document Retrieval-Augmented Generation application for asking questions over PDF files.
 
