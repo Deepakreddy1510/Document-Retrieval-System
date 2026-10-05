@@ -2,7 +2,8 @@
 
 A simple multi-document Retrieval-Augmented Generation application for asking questions over PDF files.
 
-The project extracts text from PDFs, splits it into page-aware chunks, creates embeddings, stores the chunks and vectors in PostgreSQL with pgvector, retrieves relevant passages for a question, reranks them with a CrossEncoder, and sends only the best evidence to an LLM for grounded answer generation.
+**The project extracts text from PDFs, splits it into page-aware chunks, creates embeddings, stores the chunks and vectors in PostgreSQL with pgvector, retrieves relevant passages for a question, reranks them with a CrossEncoder, and sends only the best evidence to an LLM for grounded answer generation.**
+
 ---
 
 ## What the project does
